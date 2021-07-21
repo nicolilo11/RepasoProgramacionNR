@@ -1,25 +1,4 @@
-//**PUNTO 1**//
-//**SIGNOS DEL ZODIACO**//
-
-function signoZodiacal(mes:number, dia:number)
-{
-    let fechasSignos:number[] = [20,19,20,20,20,21,22,22,21,22,21,21];
-    let signos:string[] = ["Capricornio", "Acuario", "Piscis", "Aries", "Tauro", "Geminis", "Cancer", "Leo", "Virgo",
-                  "Libra", "Escorpio", "Sagitario"];
-    let indiceMes:number = mes - 1;
-    let indiceSignoZodiaco:number;
-
-    if (dia <= fechasSignos[indiceMes])
-    {
-        indiceSignoZodiaco = indiceMes;
-    }else
-    {
-       indiceSignoZodiaco = (indiceMes + 1) % 12;
-    }
-    return "Tu signo del zodiaco es: " + signos[indiceSignoZodiaco] + "\n";
-}
-console.log("SIGNOS DEL ZODIACO");
-console.log(signoZodiacal(10,23))
+import { numerosParImpar } from './repasoif';
 
 //**PUNTO 2**//
 //**CONTINENTES**//
@@ -49,7 +28,6 @@ function paisesEnContinente(pais:string)
 }
 paisesEnContinente("China");
 
-
 //**PUNTO 3**//
 //**NUMEROS IMPARES**//
 
@@ -67,9 +45,7 @@ function numerosImpares(n:number)
     console.log("NUMEROS IMPARES");
     console.log(numerosImpares + "\n");
 }
-
-numerosImpares(7)
-
+numerosImpares(7);
 
 //**PUNTO 4**//
 //**ARRAY REVERTIDO**//
@@ -80,7 +56,6 @@ function arrayRevertido(x:any[])
 }
 console.log("ARRAY REVERTIDO");
 console.log(arrayRevertido(["Carlos", 2, "Pepita", 4]) + "\n");
-
 
 //**PUNTO 5**//
 //**COLORES EN EL ARCOIRIS**//
@@ -100,51 +75,6 @@ function coloresArcoiris(x:string[])
 console.log("COLORES DEL ARCOIRIS");
 coloresArcoiris(["Rojo", "Violeta", "Turquesa", "Verde", "Azul", "Rosa" ])
 
-//**PUNTO 6**//
-//**NUMERO PAR**//
-
-function siHayNumeroPar(arr:number[])
-{
-    let index = 0;
-    while (index < arr.length && (arr[index] % 2) != 0)
-    {
-        index++;
-    }
-    if(arr[index] % 2 == 0)
-    {
-        console.log(arr[index])
-    }else
-    {
-        console.log("No tenes ningun numero par en tu array");  
-    }
-}
-console.log("\n" + "NUMERO PAR DENTRO DE UN ARRAY")
-siHayNumeroPar([1,3,6,7,8])
-
-
-//**PUNTO 7**//
-//**NOMBRES COMENZADOS POR M**//
-
-function arrayComenzadosM(arr:string[])
-{
-    let index:number = 0;
-    let letraM:boolean = true;
-
-    while (index < arr.length && letraM)
-    {
-        if(arr[index].charAt(0) != "m" && arr[index].charAt(0) != "M")
-        {
-            letraM = false
-        }
-        index++;
-    }
-    return letraM;
-    
-}
-console.log("\n" + "PALABRAS COMENZADAS POR M");
-console.log(arrayComenzadosM(["Mariana", "cario", "Martita"]));
-
-
 //**PUNTO 8**//
 //**SUMA DE CARACTERES DE UN ARRAY**//
 
@@ -160,19 +90,9 @@ function sumaDeCaracteres(arr:string[])
 console.log("\n" + "LA SUMA DE LOS CARACTERES DE ESTE ARRAY");
 console.log(sumaDeCaracteres(["Carlos", "Nico", "Arturo", "Hermenegilda"]) + "\n");
 
-function numerosParImpar(n:number)
-{
-    if (n % 2 == 0)
-    {
-        console.log("El numero es par" + "\n");   
-    }else
-    {
-        console.log("El numero es impar" + "\n");
-    }
-}
-console.log("NUMEROS PARES O IMPARES");
-numerosParImpar(9);
 
+//**PUNTO 10**//
+//**PAR O IMPAR SUMA DE CARACTERES**//
 
 let arr1:string[] = ["Casa", "Coche", "Ciudad", "Cesta"];
 let arr2:string[] = ["Barco", "Baca", "Bicicleta", "Balon", "Bisisesto", "Brasil"];
