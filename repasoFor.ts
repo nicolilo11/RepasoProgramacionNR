@@ -52,7 +52,12 @@ numerosImpares(7);
 
 function arrayRevertido(x:any[])
 {
-    return "Este es tu array revertido " + x.reverse();
+    let arrayRevertido:string[] = new Array();
+    for(let i = 0; i < x.length; i++)
+    {
+        arrayRevertido.push(x[(x.length - 1) - i]);
+    }
+    return arrayRevertido
 }
 console.log("ARRAY REVERTIDO");
 console.log(arrayRevertido(["Carlos", 2, "Pepita", 4]) + "\n");
