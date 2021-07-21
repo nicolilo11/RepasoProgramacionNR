@@ -4,17 +4,12 @@
 function siHayNumeroPar(arr:number[])
 {
     let index = 0;
+    let numero:boolean = ((arr[index]+ 1) % 2 == 0)
     while (index < arr.length && (arr[index] % 2) != 0)
-    {
+    {   
         index++;
     }
-    if(arr[index] % 2 == 0)
-    {
-        console.log(arr[index])
-    }else
-    {
-        console.log("No tenes ningun numero par en tu array");  
-    }
+    console.log(numero); 
 }
 console.log("\n" + "NUMERO PAR DENTRO DE UN ARRAY");
 siHayNumeroPar([1,3,6,7,8]);
@@ -25,18 +20,14 @@ siHayNumeroPar([1,3,6,7,8]);
 function arrayComenzadosM(arr:string[])
 {
     let index:number = 0;
-    let letraM:boolean = true;
+    let letraM:boolean = ((arr[index]+ 1).charAt(0) == "M")
 
-    while (index < arr.length && letraM)
+    while (index < arr.length && (arr[index].charAt(0) == "M"))
     {
-        if(arr[index].charAt(0) != "m" && arr[index].charAt(0) != "M")
-        {
-            letraM = false
-        }
         index++;
     }
     return letraM;
     
 }
 console.log("\n" + "PALABRAS COMENZADAS POR M");
-console.log(arrayComenzadosM(["Mariana", "cario", "Martita"]));
+console.log(arrayComenzadosM(["Mariana", "Mario", "Martita"]));
